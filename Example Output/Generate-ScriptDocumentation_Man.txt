@@ -1,0 +1,59 @@
+## NAME
+
+Generate-ScriptDocumentation.ps1 - Generates commented code and a manual page for a PowerShell script.
+
+## SYNOPSIS
+
+`Generate-ScriptDocumentation.ps1` [-fPath] <string> [[-Author] <string>]
+
+## DESCRIPTION
+
+The `Generate-ScriptDocumentation.ps1` script generates commented code and a manual page for a PowerShell script. The script takes the path to the script file as a mandatory parameter and the author's name as an optional parameter. The commented code is saved in a new file with "_Commented.ps1" appended to the original file name, and the manual page is saved in a new file with "_Man.txt" appended to the original file name.
+
+The script uses the OpenAI API to generate the comments for the code and the manual page. The API key and organization ID are stored in variables at the beginning of the script.
+
+## PARAMETERS
+
+### -fPath
+
+The path to the PowerShell script file. This parameter is mandatory.
+
+### -Author
+
+The name of the author of the script. This parameter is optional.
+
+## EXAMPLES
+
+### Example 1
+
+```
+Generate-ScriptDocumentation.ps1 -fPath "C:\Scripts\MyScript.ps1" -Author "John Doe"
+```
+
+This example generates commented code and a manual page for the script located at "C:\Scripts\MyScript.ps1" and adds "John Doe" as the author.
+
+## NOTES
+
+The script requires an OpenAI API key and organization ID to function. These values must be stored in the `$OPEN_AI_ORG` and `$OPEN_AI_KEY` variables at the beginning of the script.
+
+The script uses the GPT-3.5-Turbo model to generate the comments. The model name is stored in the `$Model` variable at the beginning of the script.
+
+## AUTHOR
+
+Richard Vertrees
+
+## SCRIPT NAME
+
+Generate-ScriptDocumentation.ps1
+
+## PROGRAMMING LANGUAGE
+
+PowerShell
+
+## MAN PAGE STYLE
+
+Specific to PowerShell
+
+## INCLUDE EXAMPLES
+
+Yes
